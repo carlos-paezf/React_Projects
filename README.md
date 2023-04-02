@@ -2,7 +2,29 @@
 
 ## Initial Setup
 
-Create project with the next command: `pnpm create vite {00-Project_Name} --template react-swc-ts`
+- Create project:
+
+    ```txt
+    $: pnpm create vite {00-Project_Name} --template react-swc-ts
+    ```
+
+- Install project libraries:
+
+    ```txt
+    $: pnpm install
+    ```
+
+- Execute project in dev mode:
+
+    ```txt
+    $: pnpm dev
+    ```
+
+- Build deploy project:
+
+    ```txt
+    $: pnpm build
+    ```
 
 ## Projects Corresponding to the Topics
 
