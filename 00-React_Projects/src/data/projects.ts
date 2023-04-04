@@ -7,6 +7,6 @@ export const projects: ProjectType[] = [
         projectName: "Birthday Buddy",
         section: "Fundamental",
         imageSrc: baseURL( '01' ),
-        link: ""
+        link: "https://birthday-reminder-ferrer.netlify.app/"
     },
 ];
