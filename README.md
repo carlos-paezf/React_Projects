@@ -36,11 +36,11 @@ You can visit the project at the following link: [React Projects in Netlify](htt
 
 - `useState`:
 
-    1. Birthday Reminder
+    1. [Birthday Reminder](https://birthday-reminder-ferrer.netlify.app/)
 
 - `useEffect` and Conditional Rendering:
 
-    2. Tours
+    2. [Tours](https://tours-ferrer.netlify.app/)
     3. Reviews
     4. Questions
     5. Menu
