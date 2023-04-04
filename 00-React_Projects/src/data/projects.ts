@@ -9,4 +9,10 @@ export const projects: ProjectType[] = [
         imageSrc: baseURL( '01' ),
         link: "https://birthday-reminder-ferrer.netlify.app/"
     },
+    {
+        projectName: "Tours",
+        section: "Fundamental",
+        imageSrc: baseURL( '02' ),
+        link: "https://tours-ferrer.netlify.app/"
+    }
 ];
