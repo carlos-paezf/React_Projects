@@ -13,9 +13,9 @@ function App () {
             <HeroComponent />
 
             <div className="projects">
-                <CardGridComponent title='Fundamental Projects' projects={ ...fundamentalProjects } />
-                <CardGridComponent title='Complex Projects' projects={ ...complexProjects } />
-                <CardGridComponent title='Additional Projects' projects={ ...additionalProjects } />
+                <CardGridComponent title='Fundamental Projects' projects={ fundamentalProjects } />
+                <CardGridComponent title='Complex Projects' projects={ complexProjects } />
+                <CardGridComponent title='Additional Projects' projects={ additionalProjects } />
             </div>
         </>
     );
