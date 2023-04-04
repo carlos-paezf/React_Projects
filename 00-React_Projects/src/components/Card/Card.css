@@ -9,6 +9,7 @@
 }
 
 .project-image {
+    object-fit: cover;
     min-height: 80%;
     width: 100%;
 }
