@@ -66,10 +66,11 @@ export const ReviewComponent: FC = () => {
                     <FaChevronRight />
                 </button>
 
-                <button className="random-btn" onClick={ randomReview }>
-                    Surprise Me
-                </button>
             </div>
+
+            <button className="random-btn" onClick={ randomReview }>
+                Surprise Me
+            </button>
         </article>
     );
 };
