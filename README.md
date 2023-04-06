@@ -11,7 +11,7 @@ You can visit the project at the following link: [React Projects in Netlify](htt
 - Create project:
 
     ```txt
-    $: pnpm create vite {00-Project_Name} --template react-swc-ts
+    $: pnpm create vite {00-Project_Name} --template react-ts
     ```
 
 - Install project libraries:
