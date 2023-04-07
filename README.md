@@ -41,9 +41,9 @@ You can visit the project at the following link: [React Projects in Netlify](htt
 - `useEffect` and Conditional Rendering:
 
     2. [Tours](https://tours-ferrer.netlify.app/)
-    3. Reviews
-    4. Questions
-    5. Menu
+    3. [Reviews](https://reviews-ferrer.netlify.app/)
+    4. [Questions](https://accordion-ferrer.netlify.app/)
+    5. [Menu](https://menu-ferrer.netlify.app/)
     6. Tabs
     7. Slider
 
