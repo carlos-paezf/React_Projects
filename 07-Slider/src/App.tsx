@@ -1,35 +1,52 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useEffect, useState } from "react";
+import { ControlsComponent } from './components/ControlsComponent';
+import { SlideComponent } from "./components/SlideComponent";
+import { quotes } from "./data";
+import { QuoteType } from "./type";
 
-function App() {
-  const [count, setCount] = useState(0)
+function App () {
+    const [ peopleQuotes, setPeopleQuotes ] = useState<QuoteType[]>( quotes );
+    const [ index, setIndex ] = useState( 0 );
 
-  return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+    useEffect( () => {
+        const lastIndex = peopleQuotes.length - 1;
+
+        if ( index < 0 ) setIndex( lastIndex );
+
+        if ( index > lastIndex ) setIndex( 0 );
+    }, [ index, peopleQuotes ] );
+
+    useEffect( () => {
+        let slider = setInterval( () => {
+            setIndex( index + 1 );
+        }, 5000 );
+
+        return () => clearInterval( slider );
+    }, [ index ] );
+
+    return (
+        <section className="section">
+            <div className="title">
+                <h2>
+                    <span>/</span>reviews
+                </h2>
+            </div>
+
+            <div className="section-center">
+                {
+                    peopleQuotes.map( ( personQuote, idx ) => (
+                        <SlideComponent key={ idx }
+                            lenPeopleQuotes={ peopleQuotes.length }
+                            personQuote={ personQuote }
+                            generalIndex={ index }
+                            quoteIndex={ idx } />
+                    ) )
+                }
+
+                <ControlsComponent index={ index } setIndex={ setIndex } />
+            </div>
+        </section>
+    );
 }
 
-export default App
+export default App;
