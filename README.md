@@ -45,7 +45,7 @@ You can visit the project at the following link: [React Projects in Netlify](htt
     4. [Questions](https://accordion-ferrer.netlify.app/)
     5. [Menu](https://menu-ferrer.netlify.app/)
     6. [Tabs](https://tabs-ferrer.netlify.app/)
-    7. Slider
+    7. [Slider](https://slider-ferrer.netlify.app/)
 
 - Forms:
 
