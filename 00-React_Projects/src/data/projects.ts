@@ -44,5 +44,11 @@ export const projects: ProjectType[] = [
         section: "Fundamental",
         imageSrc: baseURL( '07' ),
         link: "https://slider-ferrer.netlify.app/"
+    },
+    {
+        projectName: "Lorem Ipsum Generator",
+        section: "Fundamental",
+        imageSrc: baseURL( '08' ),
+        link: "https://lorem-ipsum-ferrer.netlify.app/"
     }
 ];
