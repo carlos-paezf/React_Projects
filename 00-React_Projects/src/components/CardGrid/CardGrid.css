@@ -1,13 +1,19 @@
 .cards-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(330px, 1fr));
+    gap: 3rem 2rem;
+    margin: 0px auto 2rem;
+    padding: 0 5%;
 }
 
-@media (min-width: 1000px) {
+@media (max-width: 1200px) {
     .cards-container {
-        padding: 0 10%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .cards-container {
+        grid-template-columns: repeat(1, 1fr);
     }
 }

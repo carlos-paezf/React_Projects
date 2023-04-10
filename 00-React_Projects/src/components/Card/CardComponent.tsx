@@ -6,9 +6,9 @@ export const CardComponent: FC<ProjectType> = ( { imageSrc, projectName, link } 
     const [ loaded, setLoaded ] = useState( false );
 
     return (
-        <div className="card">
+        <a className="card" href={ link } target="_blank" rel="noopener noreferrer">
             <img className={ `project-image ${ !loaded && 'loading-blur' }` } src={ imageSrc } alt={ projectName } onLoad={ () => setLoaded( true ) } />
-            <a className="project-link" href={ link } target="_blank" rel="noopener noreferrer">{ projectName }</a>
-        </div>
+            <span className="project-link">{ projectName }</span>
+        </a>
     );
 };
