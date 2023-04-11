@@ -1,5 +1,5 @@
 import { FormEvent, useState } from "react";
-import { textBase } from '../data/index';
+import { textBase } from './data/index';
 
 function App () {
     const [ count, setCount ] = useState<number>( 0 );
