@@ -1,35 +1,47 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { FormEvent, useState } from "react";
+import Values from "values.js";
+import { SingleColor } from "./components/SingleColor";
 
-function App() {
-  const [count, setCount] = useState(0)
+function App () {
+    const [ color, setColor ] = useState<string>( '' );
+    const [ error, setError ] = useState<boolean>( false );
+    const [ list, setList ] = useState( new Values( '#f15025' ).all( 10 ) );
 
-  return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+    const handleSubmit = ( e: FormEvent ) => {
+        e.preventDefault();
+        try {
+            let colors = new Values( color ).all( 10 );
+            setList( colors );
+        } catch ( error ) {
+            setError( true );
+            console.log( error );
+        }
+    };
+
+    return (
+        <>
+            <section className="container">
+                <h3>Color Generator</h3>
+                <form onSubmit={ handleSubmit }>
+                    <input type="text" value={ color }
+                        className={ `${ error && 'error' }` }
+                        placeholder="#f15025"
+                        onChange={ ( e ) => setColor( e.target.value ) } />
+
+                    <button type="submit" className="btn">Submit</button>
+                </form>
+            </section>
+
+            <section className="colors">
+                {
+                    list.map( ( colorElm, idx ) => <SingleColor key={ idx }
+                        index={ idx }
+                        hexColor={ colorElm.hex }
+                        { ...colorElm } /> )
+                }
+            </section>
+        </>
+    );
 }
 
-export default App
+export default App;
