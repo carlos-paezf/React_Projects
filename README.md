@@ -51,7 +51,7 @@ You can visit the project at the following link: [React Projects in Netlify](htt
 
     8. [Lorem Ipsum Generator](https://lorem-ipsum-ferrer.netlify.app/)
     9. [Color Shades Generator](https://color-generator-ferrer.netlify.app/)
-    10. Grocery Bud
+    10. [Grocery Bud](https://grocery-bud-ferrer.netlify.app/)
 
 - `useRef`:
 
