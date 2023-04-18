@@ -56,5 +56,11 @@ export const projects: ProjectType[] = [
         section: "Fundamental",
         imageSrc: baseURL( '09' ),
         link: "https://color-generator-ferrer.netlify.app/"
+    },
+    {
+        projectName: "Grocery Bud",
+        section: "Fundamental",
+        imageSrc: baseURL( '10' ),
+        link: "https://grocery-bud-ferrer.netlify.app/"
     }
 ];
