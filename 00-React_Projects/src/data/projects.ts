@@ -68,5 +68,11 @@ export const projects: ProjectType[] = [
         section: "Fundamental",
         imageSrc: baseURL( '11' ),
         link: "https://navbar-ferrer.netlify.app/"
+    },
+    {
+        projectName: "Sidebar and Modal",
+        section: "Fundamental",
+        imageSrc: baseURL( '12' ),
+        link: "https://sidebar-modal-ferrer.netlify.app/"
     }
 ];
