@@ -60,7 +60,7 @@ You can visit the project at the following link: [React Projects in Netlify](htt
 - `useContext`:
 
     12. [Modal and Sidebar](https://sidebar-modal-ferrer.netlify.app/)
-    13. Stripe Submenus
+    13. [Stripe Submenus](https://stripe-submenus-ferrer.netlify.app/)
 
 - `useReducer` and `useContext`:
 
