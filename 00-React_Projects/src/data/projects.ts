@@ -74,5 +74,11 @@ export const projects: ProjectType[] = [
         section: "Fundamental",
         imageSrc: baseURL( '12' ),
         link: "https://sidebar-modal-ferrer.netlify.app/"
+    },
+    {
+        projectName: "Stripe Submenus",
+        section: "Fundamental",
+        imageSrc: baseURL( '13' ),
+        link: 'https://stripe-submenus-ferrer.netlify.app/'
     }
 ];
