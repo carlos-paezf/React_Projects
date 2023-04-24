@@ -64,7 +64,7 @@ You can visit the project at the following link: [React Projects in Netlify](htt
 
 - `useReducer` and `useContext`:
 
-    14. Cart
+    14. [Cart](https://cart-ferrer.netlify.app/)
 
 - React Router and `useCallback`:
 
