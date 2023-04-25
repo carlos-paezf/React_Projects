@@ -86,5 +86,11 @@ export const projects: ProjectType[] = [
         section: "Fundamental",
         imageSrc: baseURL( '14' ),
         link: 'https://cart-ferrer.netlify.app/'
+    },
+    {
+        projectName: "Cocktails",
+        section: "Fundamental",
+        imageSrc: baseURL( '15' ),
+        link: 'https://cocktails-ferrer.netlify.app/'
     }
 ];
