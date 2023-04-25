@@ -1,4 +1,5 @@
 import { CartContainer, Navbar } from "./components";
+import { useGlobalContext } from "./context";
 
 
 function App () {

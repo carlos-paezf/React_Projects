@@ -8,6 +8,10 @@ const url = 'https://course-api.com/react-useReducer-cart-project';
 
 
 const AppContext = createContext<AppContextType>( {
+    loading: false,
+    cart: [],
+    total: 0,
+    amount: 0,
     clearCart: () => ( {} ),
     decrease: () => ( {} ),
     increase: () => ( {} ),
@@ -50,13 +54,17 @@ const AppProvider: FC<{ children: ReactNode; }> = ( { children } ) => {
         dispatch( { type: ActionType.DISPLAY_ITEMS, payload: cart } );
     };
 
-    const toggleAmount = ( id: number, type: string ) => {
+    const toggleAmount = ( id: number, type: 'inc' | 'dec' ) => {
         dispatch( { type: ActionType.TOGGLE_AMOUNT, payload: { id, type } } );
     };
 
     useEffect( () => {
         fetchData();
     }, [] );
+
+    useEffect( () => {
+        dispatch( { type: ActionType.GET_TOTALS } );
+    }, [ state.cart ] );
 
     return (
         <AppContext.Provider value={ {
@@ -79,3 +87,4 @@ export const useGlobalContext = () => {
 
 
 export { AppContext, AppProvider };
+

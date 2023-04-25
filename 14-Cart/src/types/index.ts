@@ -1,9 +1,13 @@
 export type AppContextType = {
+    cart: CartItemType[];
+    loading: boolean;
+    total: number;
+    amount: number;
     clearCart: () => void;
     remove: ( id: number ) => void;
     increase: ( id: number ) => void;
     decrease: ( id: number ) => void;
-    toggleAmount: ( id: number, type: string ) => void;
+    toggleAmount: ( id: number, type: 'inc' | 'dec' ) => void;
 };
 
 
