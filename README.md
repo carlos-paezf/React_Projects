@@ -68,7 +68,7 @@ You can visit the project at the following link: [React Projects in Netlify](htt
 
 - React Router and `useCallback`:
 
-    15. Cocktails
+    15. [Cocktails](https://cocktails-ferrer.netlify.app/)
 
 - Advanced Projects:
 
