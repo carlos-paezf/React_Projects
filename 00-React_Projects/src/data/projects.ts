@@ -92,5 +92,11 @@ export const projects: ProjectType[] = [
         section: "Fundamental",
         imageSrc: baseURL( '15' ),
         link: 'https://cocktails-ferrer.netlify.app/'
+    },
+    {
+        projectName: "Markdwon Preview",
+        section: "Additional",
+        imageSrc: baseURL( '16' ),
+        link: 'https://markdown-preview-ferrer.netlify.app/'
     }
 ];
