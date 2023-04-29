@@ -98,5 +98,11 @@ export const projects: ProjectType[] = [
         section: "Additional",
         imageSrc: baseURL( '16' ),
         link: 'https://markdown-preview-ferrer.netlify.app/'
+    },
+    {
+        projectName: "Random Person",
+        section: 'Additional',
+        imageSrc: baseURL( '17' ),
+        link: 'https://random-person-ferrer.netlify.app/'
     }
 ];
