@@ -74,7 +74,7 @@ You can visit the project at the following link: [React Projects in Netlify](htt
 
     16. [Markdown Preview](https://markdown-preview-ferrer.netlify.app/)
     17. [Random Person](https://random-person-ferrer.netlify.app/)
-    18. Pagination
+    18. [Pagination](https://pagination-ferrer.netlify.app/)
     19. Stock Photos
     20. Dark Mode
     21. Movie DB
