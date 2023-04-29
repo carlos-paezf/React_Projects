@@ -104,5 +104,11 @@ export const projects: ProjectType[] = [
         section: 'Additional',
         imageSrc: baseURL( '17' ),
         link: 'https://random-person-ferrer.netlify.app/'
+    },
+    {
+        projectName: 'Pagination',
+        section: 'Additional',
+        imageSrc: baseURL( '18' ),
+        link: 'https://pagination-ferrer.netlify.app/'
     }
 ];
