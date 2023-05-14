@@ -113,8 +113,14 @@ export const projects: ProjectType[] = [
     },
     {
         projectName: 'Stock Photos',
-        section: 'Additional',
+        section: 'Complex',
         imageSrc: baseURL( '19' ),
         link: 'https://stock-photos-ferrer.netlify.app/'
+    },
+    {
+        projectName: 'Dark Mode',
+        section: 'Additional',
+        imageSrc: baseURL( '20' ),
+        link: 'https://dark-mode-ferrer.netlify.app/'
     }
 ];
