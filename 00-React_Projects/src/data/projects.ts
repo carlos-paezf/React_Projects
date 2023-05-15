@@ -122,5 +122,11 @@ export const projects: ProjectType[] = [
         section: 'Additional',
         imageSrc: baseURL( '20' ),
         link: 'https://dark-mode-ferrer.netlify.app/'
+    },
+    {
+        projectName: 'Movie DB',
+        section: 'Additional',
+        imageSrc: baseURL( '21' ),
+        link: 'https://movie-db-ferrer.netlify.app/'
     }
 ];
