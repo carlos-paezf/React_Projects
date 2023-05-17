@@ -128,5 +128,11 @@ export const projects: ProjectType[] = [
         section: 'Additional',
         imageSrc: baseURL( '21' ),
         link: 'https://movie-db-ferrer.netlify.app/'
+    },
+    {
+        projectName: 'Hacker News',
+        section: 'Additional',
+        imageSrc: baseURL( '22' ),
+        link: 'https://hacker-news-ferrer.netlify.app/'
     }
 ];
