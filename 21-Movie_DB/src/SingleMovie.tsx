@@ -1,10 +1,11 @@
 import { useParams, Link } from 'react-router-dom';
 import { useFetch } from './hooks';
+import { MovieType } from './types';
 
 
 export const SingleMovie = () => {
     const { id } = useParams();
-    const { isLoading, error, data: movie } = useFetch( `&i=${ id }` );
+    const { isLoading, error, data: movie } = useFetch<MovieType>( `&i=${ id }`, );
 
     if ( isLoading || !movie ) return <div className="loading"></div>;
 

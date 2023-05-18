@@ -1,14 +1,13 @@
 import { useEffect, useState } from "react";
-import { MovieType } from "../types";
 
 
 const API_ENDPOINT = `https://www.omdbapi.com/?apiKey=${ import.meta.env.VITE_MOVIE_API_KEY }`;
 
 
-export const useFetch = ( urlParams: string ) => {
+export function useFetch<S> ( urlParams: string ) {
     const [ isLoading, setIsLoading ] = useState( true );
     const [ error, setError ] = useState( { show: false, msg: '' } );
-    const [ data, setData ] = useState<MovieType[]>( [] );
+    const [ data, setData ] = useState<S>();
 
     const fetchMovies = async ( url: string ) => {
         setIsLoading( true );
@@ -35,4 +34,4 @@ export const useFetch = ( urlParams: string ) => {
     }, [ urlParams ] );
 
     return { isLoading, error, data };
-};
+}
