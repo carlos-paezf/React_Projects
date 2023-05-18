@@ -48,6 +48,8 @@ export const reducer = ( state: StateReducerType, action: ActionReducerType ): S
                 return { ...state, page: prevPage };
             }
 
+            return { ...state };
+
         default: throw new Error( `No matching "${ action.type }" action type` );
     }
 };
