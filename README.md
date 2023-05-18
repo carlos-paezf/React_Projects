@@ -79,4 +79,4 @@ You can visit the project at the following link: [React Projects in Netlify](htt
     20. [Dark Mode](https://dark-mode-ferrer.netlify.app/)
     21. [Movie DB](https://movie-db-ferrer.netlify.app)
     22. [Hacker News](https://hacker-news-ferrer.netlify.app/)
-    23. Quiz
+    23. [Quiz](https://quiz-ferrer.netlify.app)
