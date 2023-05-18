@@ -125,14 +125,20 @@ export const projects: ProjectType[] = [
     },
     {
         projectName: 'Movie DB',
-        section: 'Additional',
+        section: 'Complex',
         imageSrc: baseURL( '21' ),
         link: 'https://movie-db-ferrer.netlify.app/'
     },
     {
         projectName: 'Hacker News',
-        section: 'Additional',
+        section: 'Complex',
         imageSrc: baseURL( '22' ),
         link: 'https://hacker-news-ferrer.netlify.app/'
+    },
+    {
+        projectName: 'Quiz App',
+        section: 'Complex',
+        imageSrc: baseURL( '23' ),
+        link: 'https://quiz-ferrer.netlify.app/'
     }
 ];
