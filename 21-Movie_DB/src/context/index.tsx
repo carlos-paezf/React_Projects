@@ -20,7 +20,7 @@ const AppProvider: FC<{ children: ReactNode; }> = ( { children } ) => {
     const { isLoading, error, data: movies } = useFetch( `&s=${ query }` );
 
     return (
-        <AppContext.Provider value={ { isLoading, error, movies: movies ?? [], query, setQuery } }>
+        <AppContext.Provider value={ { isLoading, error, movies, query, setQuery } }>
             { children }
         </AppContext.Provider>
     );

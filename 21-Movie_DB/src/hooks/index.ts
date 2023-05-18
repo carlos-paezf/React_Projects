@@ -8,7 +8,7 @@ const API_ENDPOINT = `https://www.omdbapi.com/?apiKey=${ import.meta.env.VITE_MO
 export const useFetch = ( urlParams: string ) => {
     const [ isLoading, setIsLoading ] = useState( true );
     const [ error, setError ] = useState( { show: false, msg: '' } );
-    const [ data, setData ] = useState<MovieType>();
+    const [ data, setData ] = useState<MovieType[]>( [] );
 
     const fetchMovies = async ( url: string ) => {
         setIsLoading( true );

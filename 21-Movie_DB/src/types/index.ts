@@ -7,7 +7,7 @@ export type AppContextType = {
         show: boolean;
         msg: string;
     };
-    movies: MovieType[] | MovieType;
+    movies: MovieType[];
     query: string;
     setQuery: Dispatch<SetStateAction<string>>;
 };
