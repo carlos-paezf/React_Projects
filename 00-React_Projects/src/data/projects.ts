@@ -137,7 +137,7 @@ export const projects: ProjectType[] = [
     },
     {
         projectName: 'Quiz App',
-        section: 'Complex',
+        section: 'Additional',
         imageSrc: baseURL( '23' ),
         link: 'https://quiz-ferrer.netlify.app/'
     }
