@@ -10,8 +10,8 @@ export const reducer = ( state: StateReducerType, action: ActionReducerType ): S
             return {
                 ...state,
                 isLoading: false,
-                hits: action.payload.hits,
-                nbPages: action.payload.nbPages
+                hits: action.payload.hits!,
+                nbPages: action.payload.nbPages!
             };
 
         case ActionType.REMOVE_STORY:
@@ -23,7 +23,7 @@ export const reducer = ( state: StateReducerType, action: ActionReducerType ): S
         case ActionType.HANDLE_SEARCH:
             return {
                 ...state,
-                query: action.payload.query,
+                query: action.payload.query!,
                 page: 0
             };
 
