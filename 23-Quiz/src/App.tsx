@@ -1,35 +1,58 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Loading } from "./Loading";
+import { SetupForm } from "./SetupForm";
+import { useGlobalContext } from "./context";
+import { Modal } from './Modal';
 
-function App() {
-  const [count, setCount] = useState(0)
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+function App () {
+    const { waiting, loading, questions, index, correct, nextQuestion, checkAnswer } = useGlobalContext();
+
+    if ( waiting ) return <SetupForm />;
+
+    if ( loading ) return <Loading />;
+
+    const { question, incorrect_answers, correct_answer } = questions[ index ];
+
+    const answers = [ ...incorrect_answers ];
+
+    const tempIndex = Math.floor( Math.random() * 4 );
+
+    if ( tempIndex === 3 ) {
+        answers.push( correct_answer );
+    } else {
+        answers.push( answers[ tempIndex ] );
+        answers[ tempIndex ] = correct_answer;
+    }
+
+    return (
+        <main>
+            <Modal />
+
+            <section className="quiz">
+                <p className="correct-answers">
+                    correct answers : { correct }/{ index }
+                </p>
+
+                <article className="container">
+                    <h2 dangerouslySetInnerHTML={ { __html: question } } />
+                    <div className="btn-container">
+                        {
+                            answers.map(
+                                ( answers, index ) =>
+                                    <button key={ index }
+                                        className="answer-btn"
+                                        onClick={ () => checkAnswer( correct_answer === answers ) }
+                                        dangerouslySetInnerHTML={ { __html: answers } } />
+                            )
+                        }
+                    </div>
+                </article>
+
+                <button className="next-question" onClick={ nextQuestion }>Next question</button>
+            </section>
+        </main>
+    );
 }
 
-export default App
+
+export default App;
